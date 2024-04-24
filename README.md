@@ -19,7 +19,7 @@ did:itn:EzfteTXcoHXh5W1PURHrS3
 
 ```shell
 docker build . -t universalresolver/driver-did-itn
-docker run -p 8080:8080 universalresolver/driver-did-itn
+docker run -p 8080:8080 -e DID_RESOLVER_URL='https://resolver.itn.mobi' universalresolver/driver-did-itn
 curl -X GET http://localhost:8080/1.0/identifiers/did:itn:PA7xLNkMAqzzrDp4UBnrZm
 ```
 
@@ -27,7 +27,7 @@ curl -X GET http://localhost:8080/1.0/identifiers/did:itn:PA7xLNkMAqzzrDp4UBnrZm
 
 ```shell
 npm install
-npm start
+export DID_RESOLVER_URL='https://resolver.itn.mobi' && npm start
 ```
 
 ## Driver Environment Variables
