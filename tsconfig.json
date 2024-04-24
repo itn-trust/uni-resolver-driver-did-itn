@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "_",
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "skipLibCheck": true,
+    "strict": true
+  }
+}

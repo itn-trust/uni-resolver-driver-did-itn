@@ -1,0 +1,19 @@
+{
+  "name": "@itn-trust/uni-resolver-driver-did-itn",
+  "version": "1.0.0",
+  "main": "_/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "tsc -b && node _/index.js",
+    "compile": "tsc -b"
+  },
+  "dependencies": {
+    "did-resolver": "4.1.0",
+    "fastify": "4.26.2",
+    "itn-did-resolver": "0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.12.7",
+    "typescript": "5.4.5"
+  }
+}

@@ -1,0 +1,19 @@
+name: Publish image
+on: [ push ]
+jobs:
+  publish-docker-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Login to GitHub Container Registry
+        uses: actions/checkout@v4
+
+      - name: Build the hello-docker Docker image
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+        run: |
+          docker build . --tag ghcr.io/universalresolver/driver-did-itn:1.0.0
+          docker push ghcr.io/universalresolver/driver-did-itn:1.0.0
